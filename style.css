@@ -1,0 +1,218 @@
+/* ========================================================= */
+/* 1. CONFIGURATION DE BASE & POLICES (MOBILE FIRST)         */
+/* ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Montserrat:wght@600;700;800&display=swap');
+
+:root {
+    --jaune-pastel: #ffeb99;
+    --noir-texte: #1a1a1a;
+    --blanc: #ffffff;
+    --gris-clair: #f9f9f9;
+    --police-titre: 'Montserrat', sans-serif; /* Équivalent web de TT Norms */
+    --police-texte: 'Arimo', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--police-texte);
+    color: var(--noir-texte);
+    background-color: var(--blanc);
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--police-titre);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================================= */
+/* 2. EN-TÊTE ET NAVIGATION MOBILE                           */
+/* ========================================================= */
+header {
+    background-color: var(--blanc);
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.logo-cercle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--jaune-pastel);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.75rem;
+    border: 1px solid var(--noir-texte);
+}
+
+.site-title h1 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.site-title p {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #444;
+}
+
+/* Menu de navigation mobile (empilé) */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--jaune-pastel);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--noir-texte);
+    font-family: var(--police-titre);
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: block;
+}
+
+/* ========================================================= */
+/* 3. SECTIONS PRINCIPALES (ACCUEIL / ARTISTES)              */
+/* ========================================================= */
+section {
+    padding: 25px 15px;
+}
+
+.section-titre {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--jaune-pastel);
+    padding-left: 8px;
+}
+
+/* Grille des artistes sur mobile (2 colonnes) */
+.grille-artistes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.carte-artiste {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.carte-artiste span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: var(--blanc);
+    font-family: var(--police-titre);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2px 6px;
+}
+
+/* Blocs textuels sur fond jaune pastel */
+.fond-jaune {
+    background-color: var(--jaune-pastel);
+    padding: 20px;
+    margin: 15px 0;
+}
+
+/* ========================================================= */
+/* 4. PIED DE PAGE & CONTACT                                 */
+/* ========================================================= */
+footer {
+    background-color: var(--blanc);
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-contact {
+    padding: 25px 15px;
+}
+
+.footer-contact h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: none;
+}
+
+.footer-contact p {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--jaune-pastel);
+    border: none;
+    border-radius: 4px;
+    font-family: var(--police-texte);
+}
+
+.btn-envoyer {
+    background-color: var(--noir-texte);
+    color: var(--blanc);
+    border: none;
+    padding: 10px 20px;
+    font-family: var(--police-titre);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.footer-reseaux {
+    background-color: var(--jaune-pastel);
+    padding: 25px 15px;
+}
+
+.footer-reseaux h3 {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.footer-reseaux ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
