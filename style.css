@@ -536,3 +536,11 @@ footer {
 .icone-reseau.facebook { color: #1877F2; }
 .icone-reseau.instagram { color: #C13584; }
 .icone-reseau.tiktok { color: #111111; }
+
+
+/* Logos des réseaux sociaux : format plus discret */
+.liste-reseaux { gap: 9px; }
+.liste-reseaux .reseau { gap: 8px; font-size: 0.86rem; }
+.icone-reseau { width: 21px; height: 21px; flex-basis: 21px; }
+.icone-reseau svg { width: 18px; height: 18px; }
+.icone-reseau.instagram svg { stroke-width: 1.8; }
