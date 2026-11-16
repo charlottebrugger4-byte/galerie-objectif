@@ -1,93 +1,81 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les œuvres - Galerie Objectif</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles propres à la page Les œuvres */
+        .oeuvres-page { max-width: 1200px; margin: 0 auto; padding: 42px 5vw 60px; }
+        .oeuvres-page > h1 { font-size: clamp(2rem, 5vw, 3.4rem); letter-spacing: -.04em; margin: 0 0 42px; }
+        .oeuvre-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .8fr); gap: 38px; align-items: start; margin-bottom: 34px; }
+        .oeuvre-intro h2 { font-size: clamp(1.35rem, 2.5vw, 2rem); line-height: 1.15; margin: 0 0 18px; }
+        .oeuvre-intro p { line-height: 1.75; margin: 0 0 12px; }
+        .oeuvre-note { background: #ffeb99; padding: 24px; font-size: .95rem; line-height: 1.7; }
+        .galerie-photos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 28px 0 34px; }
+        .galerie-photos figure { margin: 0; overflow: hidden; background: #f2f0eb; }
+        .galerie-photos figure:first-child { grid-column: span 2; grid-row: span 2; }
+        .galerie-photos img { width: 100%; height: 100%; min-height: 190px; aspect-ratio: 1 / 1; object-fit: cover; transition: transform .35s ease; }
+        .galerie-photos figure:first-child img { aspect-ratio: 1 / 1.02; }
+        .galerie-photos figure:hover img { transform: scale(1.035); }
+        .lien-artiste { display: inline-block; color: #1a1a1a; background: #ffeb99; padding: 13px 20px; text-decoration: none; font-weight: 700; transition: background .2s ease; }
+        .lien-artiste:hover { background: #f2d95e; }
+        .oeuvres-footer { padding: 18px 5vw; border-top: 1px solid #e0e0e0; }
+        @media (max-width: 700px) {
+            .oeuvres-page { padding: 30px 18px 42px; }
+            .oeuvres-page > h1 { margin-bottom: 28px; }
+            .oeuvre-intro { grid-template-columns: 1fr; gap: 12px; }
+            .galerie-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+            .galerie-photos figure:first-child { grid-column: span 2; grid-row: auto; }
+            .galerie-photos img { min-height: 145px; }
+        }
+    </style>
 </head>
-
 <body>
-
     <header>
-        <a href="index.html" class="logo">objectif.</a>
-        <nav>
-            <a href="apropos.html">À propos</a>
-            <a href="artistes.html">Les artistes</a>
-            <a href="oeuvres.html">Les œuvres</a>
-            <a href="contact.html">Contact</a>
+        <div class="logo-container">
+            <a class="logo" href="index.html" style="color:inherit;text-decoration:none;font-weight:800;font-size:1.5rem;">objectif.</a>
+        </div>
+        <nav aria-label="Navigation principale">
+            <ul style="list-style:none;display:flex;flex-direction:row;flex-wrap:wrap;gap:18px;background:transparent;padding:0;">
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="artistes.html">Les artistes</a></li>
+                <li><a href="oeuvres.html" aria-current="page">Les œuvres</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-
+    <main class="oeuvres-page">
         <h1>LES ŒUVRES</h1>
 
-        <section>
-
-            <h2>ALICE MOITIÉ POUR MYD ET ED BANGER</h2>
-
-            <div class="description-oeuvre">
-
-                <p>
-                    Dans la continuité de sa collaboration avec
-                    Myd et Ed Banger, Alice Moitié a réalisé
-                    une série intitulée Diary, sorte de making-of
-                    en coulisses du clip All Inclusive.
-                </p>
-
-                <p>
-                    Son travail se distingue par une esthétique
-                    franche et assumée, ainsi que par une grande
-                    maîtrise du traitement de l’image.
-                </p>
-
-                <p>
-                    On retrouve ce style dans ses portraits,
-                    par lesquels Alice s’exprime avec talent :
-                    Nicolas Bedos dans une baignoire par exemple,
-                    Victoria dans sa cuisine. De la crème de
-                    modèle certes mais qui ne fait pas tout car
-                    la photographe est douée.
-                </p>
-
-                <p>
-                    Ne revendiquant pas de technique particulière,
-                    ses photos transmettent des impressions à la
-                    fois pop et naturaliste. Pour elle la photo
-                    semble être une grande source de fun, et ses
-                    shootings, qui ne se ressemblent pas,
-                    des parties de plaisir.
-                </p>
-
+        <section class="oeuvre-intro" aria-labelledby="titre-alice">
+            <div>
+                <h2 id="titre-alice">ALICE MOITIÉ POUR MYD ET ED BANGER</h2>
+                <p>Dans la continuité de sa collaboration avec Myd et Ed Banger, Alice Moitié a réalisé une série intitulée <em>Diary</em>, sorte de making-of en coulisses du clip <em>All Inclusive</em>.</p>
+                <p>Son travail se distingue par une esthétique franche et assumée, ainsi que par une grande maîtrise du traitement de l’image.</p>
+                <p>On retrouve ce style dans ses portraits, par lesquels Alice s’exprime avec talent : Nicolas Bedos dans une baignoire par exemple, Victoria dans sa cuisine. De la crème de modèle certes mais qui ne fait pas tout car la photographe est douée.</p>
+                <p>Ne revendiquant pas de technique particulière, ses photos transmettent des impressions à la fois pop et naturaliste. Pour elle la photo semble être une grande source de fun, et ses shootings, qui ne se ressemblent pas, des parties de plaisir.</p>
             </div>
-
+            <aside class="oeuvre-note">
+                <strong>ALICE MOITIÉ</strong><br>
+                Photographe et réalisatrice, elle développe un univers spontané, pop et plein d’énergie. Découvrez une sélection de ses images dans la galerie ci-dessous.
+            </aside>
         </section>
 
-        <section class="galerie-photos">
-
-            <img src="images/oeuvre-1.jpg" alt="Photographie de la série Diary">
-
-            <img src="images/oeuvre-2.jpg" alt="Photographie du tournage All Inclusive">
-
-            <img src="images/oeuvre-3.jpg" alt="Photographie d'une scène aquatique">
-
-            <img src="images/oeuvre-4.jpg" alt="Photographie d'une scène en bord de mer">
-
-            <img src="images/oeuvre-5.jpg" alt="Photographie supplémentaire de la série">
-
-            <img src="images/oeuvre-6.jpg" alt="Photographie supplémentaire de la série">
-
+        <section class="galerie-photos" aria-label="Galerie de photographies d’Alice Moitié">
+            <figure><img src="images/alice1.jpg" alt="Photographie d’Alice Moitié, image 1" loading="lazy"></figure>
+            <figure><img src="images/alice2.jpg" alt="Photographie d’Alice Moitié, image 2" loading="lazy"></figure>
+            <figure><img src="images/alice3.jpg" alt="Photographie d’Alice Moitié, image 3" loading="lazy"></figure>
+            <figure><img src="images/alice4.jpg" alt="Photographie d’Alice Moitié, image 4" loading="lazy"></figure>
         </section>
 
-        <a href="alice.html">Découvrir Alice Moitié</a>
-
+        <a class="lien-artiste" href="artistes.html#alice">Découvrir Alice Moitié&nbsp; →</a>
     </main>
 
-    <footer>
+    <footer class="oeuvres-footer">
         <p>© Galerie Objectif</p>
     </footer>
-
 </body>
 </html>
