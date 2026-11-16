@@ -494,3 +494,45 @@ footer {
     }
     .about-text p { margin-bottom: 12px; }
 }
+
+
+/* Réseaux sociaux : identifiants accompagnés de leurs logos */
+.liste-reseaux {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0;
+    margin: 0;
+}
+.liste-reseaux .reseau {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 0.92rem;
+    font-weight: 400;
+}
+.reseau strong { margin-right: 5px; }
+.icone-reseau {
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.icone-reseau svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+.icone-reseau.instagram svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+.icone-reseau.instagram .point { fill: currentColor; stroke: none; }
+.icone-reseau.facebook { color: #1877F2; }
+.icone-reseau.instagram { color: #C13584; }
+.icone-reseau.tiktok { color: #111111; }
