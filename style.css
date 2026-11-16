@@ -607,11 +607,13 @@ header nav > ul > li > a { display: block !important; white-space: nowrap !impor
 
 /* Encadré jaune des réseaux sociaux sur les pages intérieures */
 .encadre-reseaux {
-    background: var(--jaune-pastel, #ffeb99);
-    padding: 22px 26px;
-    margin: 34px auto;
-    width: min(100% - 36px, 1120px);
-    border-radius: 7px;
+    background: #ffeb99 !important;
+    padding: 24px 28px;
+    margin: 36px auto 42px;
+    width: min( calc(100% - 36px), 1120px );
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: block;
 }
 .encadre-reseaux h2 { font-size: 1.15rem; margin: 0 0 14px; }
 .encadre-reseaux ul {
