@@ -5,124 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos - E-GALERIE</title>
 
-    <style>
-        /* STYLE GÉNÉRAL */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #ffffff;
-            color: #111111;
-        }
-
-        /* BANDE JAUNE À DROITE */
-        .yellow-background {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 17%;
-            height: 100%;
-            min-height: 650px;
-            background-color: #ffe99a;
-            z-index: -1;
-        }
-
-        /* EN-TÊTE */
-        header {
-            padding: 42px 5%;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-            text-decoration: none;
-            color: #000000;
-        }
-
-        /* CONTENU PRINCIPAL */
-        .about-container {
-            max-width: 1400px;
-            margin: 45px auto 80px;
-            padding: 0 5%;
-            display: grid;
-            grid-template-columns: 36% 64%;
-            align-items: center;
-            gap: 35px;
-        }
-
-        /* TEXTE */
-        .about-text h1 {
-            font-size: 38px;
-            font-weight: 400;
-            margin-bottom: 15px;
-        }
-
-        .about-text p {
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 0;
-        }
-
-        /* IMAGE */
-        .about-image {
-            width: 100%;
-            height: 375px;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* VERSION MOBILE */
-        @media screen and (max-width: 768px) {
-
-            .yellow-background {
-                width: 20%;
-                min-height: 100%;
-            }
-
-            header {
-                padding: 30px 6%;
-            }
-
-            .about-container {
-                grid-template-columns: 1fr;
-                margin-top: 20px;
-                padding: 0 6%;
-                gap: 30px;
-            }
-
-            .about-text h1 {
-                font-size: 32px;
-            }
-
-            .about-text p {
-                font-size: 15px;
-            }
-
-            .about-image {
-                height: 280px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- FOND JAUNE -->
     <div class="yellow-background"></div>
 
-    <!-- EN-TÊTE -->
     <header>
         <a href="index.html" class="logo">E-GALERIE</a>
     </header>
 
-    <!-- PAGE À PROPOS -->
     <main class="about-container">
 
-        <!-- TEXTE DE PRÉSENTATION -->
         <section class="about-text">
 
             <h1>Qui sommes-nous ?</h1>
@@ -131,12 +26,11 @@
                 Fondée à Nice en 2020 en plein cœur de la crise
                 sanitaire, la e-galerie OBJECTIF est née d'une
                 conviction profonde : l'art ne doit jamais s'arrêter.
-
                 Portée par un trio passionné, notre plateforme a
                 vu le jour avec une mission simple mais
-                essentielle : faire vivre la création artistique
-                et la rendre accessible à tous, directement
-                depuis chez soi.
+                essentielle : faire vivre la création artistique et la
+                rendre accessible à tous, directement depuis
+                chez soi.
 
                 <br>
 
@@ -145,7 +39,6 @@
                 web, nous mettons en lumière des photographes
                 aux univers singuliers, allant de jeunes talents
                 émergents à des visions résolument modernes.
-
                 Plus qu'une galerie en ligne, OBJECTIF est une
                 passerelle ouverte sur le regard d'artistes
                 d'aujourd'hui, à découvrir sans modération.
@@ -153,12 +46,11 @@
 
         </section>
 
-        <!-- PHOTOGRAPHIE DE NICE -->
         <section class="about-visual">
 
             <img
                 src="images/nice.jpg"
-                alt="Vue panoramique de Nice et de la Promenade des Anglais"
+                alt="Vue de Nice et de la Promenade des Anglais"
                 class="about-image"
             >
 
