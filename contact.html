@@ -1,28 +1,64 @@
-/* Style simple pour la page contact */
-.section-contact {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Galerie Objectif - Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Ligne pour charger les logos des réseaux sociaux -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-.section-contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 30px;
-}
+  <!-- En-tête / Navigation -->
+  <header>
+    <div class="logo-titre">
+      <h1>GALERIE OBJECTIF</h1>
+    </div>
+    <p class="slogan">La photographie contemporaine, accessible à tous, où que vous soyez</p>
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">À propos</a></li>
+        <li><a href="artistes.html">Les artistes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-.section-contact input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+  <!-- Section Contact -->
+  <main>
+    <section class="section-contact">
+      <h2>Nous contacter</h2>
+      
+      <div class="bloc-contact">
+        <h3>Email</h3>
+        <p><a href="mailto:objectif.galerie@gmail.com">objectif.galerie@gmail.com</a></p>
+      </div>
 
-.section-contact button {
-  padding: 10px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
+      <div class="bloc-newsletter">
+        <h3>La Newsletter Objectif Galerie</h3>
+        <form action="#" method="POST">
+          <label for="nom">Votre nom</label>
+          <input type="text" id="nom" name="nom" required>
+
+          <label for="email">Votre e-mail</label>
+          <input type="email" id="email" name="email" required>
+
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+
+      <div class="bloc-reseaux">
+        <h3>Nos réseaux sociaux</h3>
+        <ul>
+          <li><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i> objectif.galerie_art</a></li>
+          <li><a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i> ObectifGalerie</a></li>
+          <li><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> objectif.galerie_art</a></li>
+          <li><a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i> lagalerie.objectif</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
