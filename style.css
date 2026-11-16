@@ -331,3 +331,20 @@ footer {
     margin-bottom: 25px;
     font-size: 2rem;
 }
+
+
+/* LOGO OBJECTIF ET EN-TÊTES DES PAGES */
+.logo-image-link { display: inline-flex; align-items: center; flex: 0 0 auto; }
+.logo-image { display: block; width: 88px; height: 88px; object-fit: contain; }
+.logo-home { width: 190px; height: 190px; }
+.site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.site-nav { list-style: none; display: flex; flex-direction: row; flex-wrap: wrap; gap: 12px 20px; background: transparent; padding: 0; margin: 0; }
+.site-nav a { color: var(--noir-texte); text-decoration: none; font-family: var(--police-titre); font-size: .85rem; font-weight: 600; }
+.site-nav a:hover { text-decoration: underline; }
+.logo-titre { display: flex; align-items: center; gap: 18px; }
+.logo-titre .logo-image { width: 88px; height: 88px; }
+@media (max-width: 700px) {
+  .logo-home { width: 140px; height: 140px; }
+  .site-header { align-items: flex-start; }
+  .site-nav { gap: 10px 14px; }
+}
